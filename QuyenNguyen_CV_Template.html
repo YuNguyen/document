@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Quyen Nguyen - Software Engineer CV</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500&family=Montserrat:wght@600;700&display=swap');
+
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      color: #2E2E2E;
+      background-color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      width: 210mm;
+      height: 297mm;
+      margin: auto;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .left {
+      width: 32%;
+      background-color: #F9FAFB;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+
+    .right {
+      width: 68%;
+      padding: 25px 35px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      color: #991B1B;
+      margin-bottom: 4px;
+      font-size: 24px;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #991B1B;
+      font-size: 14px;
+      margin-top: 15px;
+      border-bottom: 1px solid #B45309;
+      padding-bottom: 3px;
+    }
+
+    .title {
+      color: #2E2E2E;
+      font-size: 13px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .contact p,
+    .education p,
+    .skills p,
+    .language p,
+    .strength p {
+      margin: 4px 0;
+      font-size: 11px;
+    }
+
+    .summary {
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .exp-block {
+      margin-bottom: 15px;
+
+    }
+
+    .exp-block h3 {
+      color: #991B1B;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12.5px;
+      margin: 0;
+    }
+
+    .exp-block p {
+      font-size: 11px;
+      margin: 3px 0;
+    }
+
+    ul {
+      margin: 5px 0 0 16px;
+      padding: 0;
+    }
+
+    li {
+      font-size: 11px;
+      margin-bottom: 3px;
+    }
+
+    .tech {
+      color: #0E7490;
+      font-weight: bold;
+    }
+
+    .education {
+      margin-top: 15px;
+    }
+
+    .education h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #991B1B;
+      font-size: 14px;
+      margin-bottom: 12px;
+
+      padding-bottom: 3px;
+    }
+
+    .edu-block {
+      position: relative;
+      background-color: #F9FAFB;
+      margin-bottom: 14px;
+    }
+
+    /* Gold separator line */
+    .edu-block::after {
+      content: "";
+      display: block;
+      margin-top: 10px;
+    }
+
+    .edu-block:last-child::after {
+      border-bottom: none;
+    }
+
+    .edu-block p {
+      font-size: 11px;
+      margin: 4px 0;
+      line-height: 1.4;
+    }
+
+    .edu-block b {
+      font-family: 'Montserrat', sans-serif;
+      color: #2E2E2E;
+    }
+
+    .edu-year {
+      color: #991B1B;
+      font-weight: 600;
+    }
+
+    .achievements {
+      margin-top: 15px;
+    }
+
+    .achievements h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #991B1B;
+      font-size: 14px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #B45309;
+      padding-bottom: 3px;
+    }
+
+    .ach-block {
+      position: relative;
+      background-color: #F9FAFB;
+      border-left: 4px solid #991B1B;
+      padding: 10px 14px 10px 18px;
+      border-radius: 6px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+      page-break-after: avoid;
+    }
+
+    .ach-block:after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid #B45309;
+      margin-top: 8px;
+    }
+
+    .ach-block:last-child:after {
+      border-bottom: none;
+    }
+
+    .ach-block p {
+      font-size: 11px;
+      margin: 3px 0;
+      line-height: 1.4;
+    }
+
+    .ach-block b {
+      color: #2E2E2E;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .avatar {
+      background-position: top center;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      text-align: center;
+
+    }
+
+    .project_des {
+      color: #050505;
+      font-weight: bold;
+    }
+
+    .role_des {
+      margin-left: 28px;
+    }
+
+    /* In ra PDF không bị trang trắng */
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        box-shadow: none;
+        page-break-after: avoid;
+        page-break-before: avoid;
+        page-break-inside: avoid;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Left Column -->
+    <div class="left">
+
+      <div>
+        <h1 style="text-align: center;">Quyen Nguyen</h1>
+        <div class="title">Software Engineer</div>
+        <div style="text-align: center;">
+          <img src="C:\Users\KIL\Desktop\CV_2025\profile.jpg" class="avatar">
+        </div>
+      </div>
+
+
+      <div class="contact">
+        <h2>Contact</h2>
+        <p>📞 0793121093</p>
+        <p>✉️ nguyenquyen19193@gmail.com</p>
+        <p>🌐 github.com/YuNguyen</p>
+      </div>
+
+      <div class="summary">
+        <h2>Profile Summary</h2>
+        <p>Experienced Java Software Engineer with over 5 years of experience in backend and full-stack development,
+          having worked on systems in Insurance, Manufacturing, and Payment domains.
+        </p>
+      </div>
+
+      <div class="strength">
+        <h2>Career Objective</h2>
+        <p>Enhancing my skills to advance as a <b>Professional Full-Stack Developer</b>.
+        </p>
+
+      </div>
+
+      <div class="skills">
+        <h2>Technical Skills </h2>
+        <p>Java (Core & EE): ◆◆◆◆◆</p>
+        <p>Spring Boot: ◆◆◆◇◇</p>
+        <p>Angular / VueJS: ◆◆◆◇◇</p>
+        <p>PostgreSQL / MySQL: ◆◆◆◆◇</p>
+        <p>Docker / Microservices: ◆◇◇◇◇</p>
+        <p>Git / SVN / Jira: ◆◆◆◆◆</p>
+        <p>◆ = years of experience.</p>
+
+      </div>
+
+      <div class="education">
+        <h2>Education</h2>
+
+        <div class="edu-block">
+          <p>🎓 <b>Van Lang University</b></p>
+          <p>B.S. in Software Engineering</p>
+          <p class="edu-year">2012 – 2016</p>
+        </div>
+
+        <div class="edu-block">
+          <p>🎓 <b>University of Science</b></p>
+          <p>Java Web Application Program</p>
+          <p class="edu-year">2018</p>
+        </div>
+
+        <div class="edu-block">
+          <p>🎓 <b>Udemy Certificate</b></p>
+          <p>Master Microservices with Spring Boot, Docker, and Kubernetes</p>
+          <p class="edu-year">2025</p>
+        </div>
+
+      </div>
+      <div class="language">
+        <h2>Languages</h2>
+        <p>English – 660 TOEIC (Listening & Reading) - (DXC Internal Test)</p>
+        <p>refer: <a href="url">https://shorturl.at/b0Vxi</a></p>
+      </div>
+
+
+
+    </div>
+
+    <!-- Right Column -->
+    <div class="right">
+      <div class="work">
+        <h2 style="border-bottom: 2px solid #B45309;">Work Experience</h2>
+
+        <div class="exp-block">
+          <h3>🏢 CSC / DXC Technology Vietnam – 📅 2016 – 02/2018</h3>
+          <p class="tech">🧩 Project Name: Integral &nbsp;&nbsp;|&nbsp;&nbsp; Role: Associate Java Developer</p>
+          <p class="project_des">Project Description:</p>
+          <p> Integral is a web application that supports managing all aspects of Life, P&C, and Group insurance.
+          </p>
+          <p class="project_des">Responsibilities:</p>
+          <ul class="role_des">
+            <li>Resolved UI and functional issues in the Integral project, improving system stability.</li>
+            <li>Enhanced batch jobs for data extraction and financial document generation (Receipts, Payments, Direct
+              Journals) on a COBOL-to-Java migrated framework.</li>
+            <li>Authored Technical Specification Documents (TSDs) for key modules.</li>
+            <li>Collaborated with the XML Team to implement data extraction and generate BSIB Group & Policy XML
+              reports.</li>
+          </ul>
+          <p class="tech">⚙️ Tech Stack: Java,Spring Framework, JSP/Servlet, Hibernate, SQL Server</p>
+        </div>
+
+        <div class="exp-block">
+          <h3>🏢 System EXE Vietnam - Java Developer - 📅 6/2018 – 12/2019</h3>
+          <p class="tech">🧩 Project Name: Manufacturing Management System&nbsp;&nbsp;|&nbsp;&nbsp;Role: Java
+            Developer</p>
+          <p class="project_des">Project Description:</p>
+          <p> MMS is a system for production planning, scheduling, and inventory control, helping companies calculate
+            material needs and track stock levels when developing new products.
+          </p>
+          <p class="project_des">Responsibilities:</p>
+          <ul class="role_des">
+            <li>Resolved UI and functional issues to ensure system stability.</li>
+            <li>Developed new features based on user requirements and BrSE task assignments.</li>
+            <li>Supported cross-country collaboration by translating technical documents (VN/JP → EN) for the Myanmar
+              team.</li>
+            <li>Optimized SQL queries, improving overall system performance.</li>
+          </ul>
+          <p class="tech">⚙️ Tech Stack: Java, PostgreSQL, Tomcat, SVN,Git, Flex</p>
+        </div>
+
+        <div class="exp-block">
+          <h3>🏢 T2P Travel2Pay (Germany) - 📅 1/2020 – 12/2021</h3>
+          <p class="tech">🧩 Project Name: Travel & Payment Management&nbsp;&nbsp;|&nbsp;&nbsp;Role: Java Developer
+          </p>
+          <p class="project_des">Project Description:</p>
+          <p>Payment product helps mid and large-sized companies across Europe grow their business with smart, fully
+            digital solutions for managing travel budgets, receipts, invoices, and expenses.</p>
+          <p class="project_des">Responsibilities:</p>
+          <ul class="role_des">
+            <li>Developed new modules for budgeting and expense tracking.</li>
+            <li>Developed new features based on user requirements and requests from the Business Analyst (Product
+              Owner, Germany).</li>
+          </ul>
+          <p class="tech">⚙️ Tech Stack: Java,Spring boot,Microservices, VueJS, MySQL, Docker</p>
+        </div>
+
+        <div class="exp-block">
+          <h3>🏢 System EXE Vietnam — 📅 6/2022 – 12/2023</h3>
+          <p class="tech">🧩 Project Name: Manufacturing Management System&nbsp;&nbsp;|&nbsp;&nbsp;Role: Middle Java
+            Developer</p>
+          <p class="project_des">Project Description:</p>
+          <p> MMS is a system for production planning, scheduling, and inventory control, helping companies calculate
+            material needs and track stock levels when developing new products.
+          </p>
+          <p class="project_des">Responsibilities:</p>
+          <ul class="role_des">
+            <li>Resolved UI and functional issues to ensure system stability.</li>
+            <li>Developed new features based on user requirements.</li>
+            <li>Optimized SQL queries, improving overall system performance.</li>
+            <li>Led 3-members in 3-month upgrade project (100% milestones achieved).</li>
+            <li>Redesigned production modules and optimized code.</li>
+          </ul>
+          <p class="tech">⚙️ Tech Stack: Java,Spring Framework, Angular, PostgreSQL, Git</p>
+        </div>
+
+        <div class="exp-block">
+          <h3>🏗 Freelance Projects</h3>
+          <p style="color: #0E7490;font-weight: bold;">📅 2024 – 2025</p>
+          <ul>
+            <li><b>Trieu Thanh Milk Tea</b> – Created brand identity (logo, uniform) with strong client feedback.</li>
+            <p><a href="url">https://github.com/YuNguyen/design_doc/tree/main/TrieuThanh_MilkTea</a></p>
+            <li><b>Nafaco Company</b> – Proposed Microsoft Azure Blob Storage solution for the design team, highly
+              appreciated by the client.</li>
+            <p>Reference: Mr. Tran Thai My – Design Team | 0937 913 030</p>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="achievements">
+        <h2>Achievements</h2>
+
+        <div class="ach-block">
+          <p>🏆 <b>Effort Award - System EXE Company</b> Received Effort Award for outstanding individual performance
+            in the Manufacturing System (Maintenance) project.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
